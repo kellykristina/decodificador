@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/script.js"></script>
+    <title>Decodificar</title>
+    
+</head>
+
+<body>
+    <main>
+        <!--barra lateral da esquerda, armazena apenas logo da alura-->
+        <div class="container__esquerdo">
+            <img src="/assets/logo alura.png" class="logo_alura" alt="Logo da Alura">
+        </div>
+
+        <!--barra central, recebe o texto a ser manipulado-->
+        <div class="texto__central">
+            <textarea onkeyup="checkText(event)" class="input_text" placeholder="Digite seu texto aqui..."></textarea>
+
+            <div class="container__botoes">
+                <span>
+                    <img src="/assets/informacao.png" class="alerta" alt="exclamação">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </span>
+
+                <div class="botoes">
+                    <button class="encrypt" onclick="btnEncrypt(),removeRightSideBar()">Criptografar</button>
+                    <button class="decrypt" onclick="btnDecrypt()">Descriptografar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--barra lateral da direita, avisa que não há texto-->
+        <div class="container__direito">
+            <img src="/assets/boneco.png" class="search_image" alt="Boneco segurando lupa">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <p>Digite à esquerda um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+
+        <div class="container__direito_output" style="display: none;">
+            <textarea class="output_text"></textarea>
+            <button onclick="copy()" class="copy">Copiar</button>
+        </div>
+    </main>
+
+    <footer>
+        <div id="icons">
+            <p>Desenvolvido por Kelly Kristina</p>
+            <a class="link__icons" href="https://github.com/kellykristina" target="_blank">
+                <img src="/assets/github.png" alt="logo github">
+            </a>
+            <a class="link__icons" href="https://www.linkedin.com/in/kellykristina/" target="_blank">
+                <img src="/assets/linkedin.png" alt="Logo linkedin">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="/scripts/script.js"></script>
+
+</html>
